@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* Variantes customizadas */
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* Design Tokens */
+:root {
+  /* Fontes */
+  --default-font-family: "Inter", sans-serif;
+
+  --fundo-100: #181a20;
+  --black-200: #0f1116;
+  --black-300: #0a0b0e;
+  --white-100: #ffffff;
+  --white-200: #f8f9fa;
+  --gold-color:#f0bb0b;
+  --yellow-color: #f3e8cb;
+  --green-color: #64a68d;
+}
+
+
+@layer components {
+
+  /* TEXTOS */
+  .title {
+    @apply lg:text-xl xl:text-2xl 2xl:text-3xl font-bold text-gray-900 dark:text-white;
+  }
+
+  .subtitle {
+    @apply lg:text-xs xl:text-sm 2xl:text-base font-normal text-gray-700 dark:text-gray-100;
+  }
+
+  /* GRID  */
+  .gridTemplate {
+      @apply grid grid-cols-12 gap-2;
+  }
+}
