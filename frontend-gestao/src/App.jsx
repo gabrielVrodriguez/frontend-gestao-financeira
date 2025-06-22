@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className='gridTemplate min-h-screen p-3 '>
+        <div className='gridTemplate  '>
 
           <Routes>
 
