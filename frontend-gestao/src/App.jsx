@@ -5,28 +5,42 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+
 import AccessPage from './pages/AccessPage.jsx'
+import HomePage from './pages/HomePage.jsx'
+import SideBar from './components/layout/Sidebar.jsx'
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [isAuthenticated, setIsAuthenticated] = useState(true)
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false)
 
   return (
     <>
       <BrowserRouter>
-        <div className='gridTemplate  '>
+        
 
-          <Routes>
+          <div className='min-h-screen'>
+            {isAuthenticated && (
+              <SideBar
+              />
+            )}
 
-            <Route path='/access' element={
-              <AccessPage />
 
-            }>
 
-            </Route>
+            <div className={`gridTemplate p-4 transition-all duration-300 ${isSidebarCollapsed ? '' : ''}`}>
+              <Routes>
+                <Route path='/access' element={
+                  <AccessPage />
+                }>
+                </Route>
 
-          </Routes>
+                <Route path='/homepage' element={
+                  <HomePage />
+                }></Route>
+              </Routes>
+            </div>
         </div>
-
-      </BrowserRouter>
+      </BrowserRouter >
 
     </>
   )

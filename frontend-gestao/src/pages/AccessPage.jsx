@@ -1,7 +1,7 @@
 import React from 'react'
 import Dracma from '../assets/images/DracmaSvg.svg'
 import DracmaDV from '../assets/images/DracmaC.svg'
-import FloatingLabelInput from '../UI/UX/inputs/FloatingInputLabel'
+import FloatingLabelInput from '../components/UI/inputs/FloatingInputLabel'
 import { validateEmail } from '../utils/validatorUtils'
 import { useState } from 'react'
 

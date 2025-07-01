@@ -10,6 +10,11 @@ input[type="password"]::-ms-clear {
   display: none;
 }
 
+ *,
+  *::before,
+  *::after {
+    box-sizing: content-box; /* <--- AQUI ESTÁ A MÁGICA! */
+  }
 @theme {
   --default-font-family: "Inter", sans-serif;
   --text-xxs: 0.6rem;
