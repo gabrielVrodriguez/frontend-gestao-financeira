@@ -11,7 +11,7 @@ import HomePage from './pages/HomePage.jsx'
 import SideBar from './components/layout/Sidebar.jsx'
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(true)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false)
 
   return (
@@ -27,7 +27,7 @@ function App() {
 
 
 
-            <div className={`gridTemplate p-4 transition-all duration-300 ${isSidebarCollapsed ? '' : ''}`}>
+            <div className={`gridTemplate  bg-black-900 transition-all duration-300 ${isSidebarCollapsed ? '' : ''}`}>
               <Routes>
                 <Route path='/access' element={
                   <AccessPage />
