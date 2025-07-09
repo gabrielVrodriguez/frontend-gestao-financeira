@@ -11,23 +11,25 @@ import HomePage from './pages/HomePage.jsx'
 import SideBar from './components/layout/Sidebar.jsx'
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false)
+  const [isAuthenticated, setIsAuthenticated] = useState(true)
+  const [isCollapsed, setIsCollapsed] = useState(false)
 
   return (
     <>
       <BrowserRouter>
         
 
-          <div className='min-h-screen'>
+          <div className='flex min-h-screen'>
             {isAuthenticated && (
               <SideBar
+                isCollapsed={isCollapsed}
+                setIsCollapsed={setIsCollapsed}
               />
             )}
 
 
 
-            <div className={`gridTemplate  bg-black-900 transition-all duration-300 ${isSidebarCollapsed ? '' : ''}`}>
+            <div className={`gridTemplate  bg-black-900 transition-all duration-300 ${isCollapsed ? '' : ''}`}>
               <Routes>
                 <Route path='/access' element={
                   <AccessPage />
