@@ -29,14 +29,14 @@ function App() {
 
 
 
-            <div className={`gridTemplate  bg-black-900 transition-all duration-300 ${isCollapsed ? '' : ''}`}>
+            <div className={` w-full bg-black-900 transition-all duration-300 ${isCollapsed ? '' : ''}`}>
               <Routes>
                 <Route path='/access' element={
                   <AccessPage />
                 }>
                 </Route>
 
-                <Route path='/homepage' element={
+                <Route path='/homePage' element={
                   <HomePage />
                 }></Route>
               </Routes>
