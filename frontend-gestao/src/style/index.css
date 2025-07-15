@@ -101,6 +101,6 @@ input[type="password"]::-ms-clear {
 
   /* GRID  */
   .gridTemplate {
-      @apply grid grid-cols-12 gap-2;
+      @apply grid grid-cols-12 gap-4;
   }
 }

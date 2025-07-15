@@ -36,7 +36,7 @@ function App() {
                 }>
                 </Route>
 
-                <Route path='/homepage' element={
+                <Route path='/homePage' element={
                   <HomePage />
                 }></Route>
               </Routes>
