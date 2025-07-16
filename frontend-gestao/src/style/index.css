@@ -79,28 +79,42 @@ input[type="password"]::-ms-clear {
   --error: var(--red-600);
   --warning: var(--primary-400);
 
-
   
 }
+
+
 
 
 @layer components {
 
   /* TEXTOS */
   .title {
-    @apply lg:text-xl xl:text-2xl 2xl:text-3xl font-bold text-white-300;
+    @apply lg:text-xl xl:text-2xl 2xl:text-3xl font-bold text-black-600 dark:text-primary;
   }
 
   .subtitle {
-    @apply lg:text-xs xl:text-sm 2xl:text-base font-normal text-white-300;
+    @apply lg:text-xs xl:text-sm 2xl:text-base font-normal text-black-600 dark:text-primary;
   }
 
   .big-subtitle {
-    @apply lg:text-xxs xl:text-xs 2xl:text-sm font-normal text-white-300;
+    @apply lg:text-xxs xl:text-xs 2xl:text-sm font-normal text-black-600 dark:text-primary;
+  }
+
+  .gradient {
+    @apply bg-gradient-to-r from-[#A8732F] to-[#ecd084] bg-clip-text text-transparent
   }
 
   /* GRID  */
   .gridTemplate {
-      @apply grid grid-cols-12 gap-4;
+      @apply grid grid-cols-12 gap-2;
   }
+
+  /*Modes*/
+  .style-default {
+    @apply text-black-700 bg-white-400  dark:bg-black-800 dark:text-primary
+  }
+
+  /* .stile-default-hover {
+
+  } */
 }
