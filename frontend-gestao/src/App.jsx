@@ -5,7 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { ThemeProvider, ThemeContext } from './contexts/ThemeContext.jsx'; // Importe o ThemeProvider E o ThemeContext
+import { ThemeProvider, ThemeContext } from './contexts/ThemeContext.jsx'; 
 
 import AccessPage from './pages/AccessPage.jsx'
 import HomePage from './pages/HomePage.jsx'
@@ -17,7 +17,7 @@ function AppLayout () {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
-    <div className={`flex min-h-screen`}>
+    <div className={`flex min-h-screen style-default`}>
       {isAuthenticated && (
         <SideBar
           isCollapsed={isCollapsed}
@@ -28,8 +28,8 @@ function AppLayout () {
       {/* O conteúdo principal da sua aplicação */}
       <main className={`
         flex-1 
-        transition-all duration-300 
-        ${!isAuthenticated ? 'pl-0' : isCollapsed ? 'pl-20' : 'pl-64'}
+        transition-all duration-300 style-default
+        ${!isAuthenticated ? 'pl-0' : isCollapsed ? 'pl-10' : 'pl-20'}
       `}>
         <Routes>
           <Route path='/access' element={<AccessPage />} />

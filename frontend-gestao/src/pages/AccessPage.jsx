@@ -21,8 +21,8 @@ export default function AccessPage() {
 
 
   return (
-    <div className='gridTemplate col-span-12 h-screen gap-0'>
-      <div className='col-span-12 flex  p-10'>
+    <div className='gridTemplate style-default col-span-12 h-screen gap-0'>
+      <div className='col-span-12 flex '>
         <div className='w-1/2 flex flex-col gap-3 justify-center items-center'>
           <div className='w-100'>
 

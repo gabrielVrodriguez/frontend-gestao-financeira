@@ -82,22 +82,19 @@ input[type="password"]::-ms-clear {
   
 }
 
-
-
-
 @layer components {
 
   /* TEXTOS */
   .title {
-    @apply lg:text-xl xl:text-2xl 2xl:text-3xl font-bold text-black-600 dark:text-primary;
+    @apply lg:text-xl xl:text-2xl 2xl:text-3xl font-bold text-black-600 dark:text-white-600;
   }
 
   .subtitle {
-    @apply lg:text-xs xl:text-sm 2xl:text-base font-normal text-black-600 dark:text-primary;
+    @apply lg:text-xs xl:text-sm 2xl:text-base font-normal text-black-600 dark:text-white-600;
   }
 
   .big-subtitle {
-    @apply lg:text-xxs xl:text-xs 2xl:text-sm font-normal text-black-600 dark:text-primary;
+    @apply lg:text-xxs xl:text-xs 2xl:text-sm font-normal text-black-600 dark:text-white-600;
   }
 
   .gradient {
@@ -111,7 +108,11 @@ input[type="password"]::-ms-clear {
 
   /*Modes*/
   .style-default {
-    @apply text-black-700 bg-white-400  dark:bg-black-800 dark:text-primary
+    @apply text-black-800 bg-white-400  dark:bg-black-900 dark:text-white-300 transition-all duration-300
+  }
+
+  .style-secondary {
+    @apply text-black-700 bg-white-500  dark:bg-black-800 dark:text-white-600 transition-all duration-300
   }
 
   /* .stile-default-hover {
