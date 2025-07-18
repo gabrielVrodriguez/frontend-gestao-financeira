@@ -15,7 +15,7 @@ export default function FloatingLabelInput({ id, label, type = 'text', value, on
                 value={value}
                 onBlur={onBlur}
                 onChange={onChange}
-                className={`block pt-4 pb-2 px-4 w-full text-white big-subtitle 
+                className={`block pt-4 pb-2 px-4 w-full big-subtitle 
                 bg-transparent rounded border ${borderColor} focus:outline-none 
                 focus:ring-0 focus:border-accent-500 peer`}
                 placeholder=' '
