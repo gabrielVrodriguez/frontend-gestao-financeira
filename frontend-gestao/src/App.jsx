@@ -7,8 +7,8 @@ import {
 } from "react-router-dom";
 import { ThemeProvider, ThemeContext } from './contexts/ThemeContext.jsx';
 
-import AccessPage from './pages/AccessPage.jsx'
-import HomePage from './pages/HomePage.jsx'
+import AccessPage from './pages/AccessPage/AccessPage.jsx'
+import HomePage from './pages/HomePage/HomePage.jsx'
 import SideBar from './components/layout/Sidebar.jsx'
 import ProtectedRoute from './components/auth/ProtectedRoutes.jsx';
 

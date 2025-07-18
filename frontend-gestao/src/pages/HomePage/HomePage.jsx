@@ -1,5 +1,5 @@
 import React from 'react'
-import CardWithMetric from '../components/layout/CardWithMetric';
+import CardWithMetric from '../../components/layout/CardWithMetric';
 
 export default function HomePage() {
 

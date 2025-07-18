@@ -1,20 +1,19 @@
 import React from 'react'
-import Dracma from '../assets/images/DracmaSvg.svg'
-import DracmaDV from '../assets/images/DracmaC.svg'
-import Wallpapers from '../assets/images/WallPaperS.svg'
-import FloatingLabelInput from '../components/UI/inputs/FloatingInputLabel'
-import { validateEmail } from '../utils/validatorUtils'
+import DracmaDV from '../../assets/images/DracmaC.svg'
+import Wallpapers from '../../assets/images/WallPaperS.svg'
+import FloatingLabelInput from '../../components/UI/inputs/FloatingInputLabel'
+import { validateEmail } from '../../utils/validatorUtils'
 import { useState } from 'react'
-import BrandPanel from '../components/layout/BrandPanel'; 
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 export default function AccessPage() {
 
   const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState(null); 
+  const [emailError, setEmailError] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState('')
- 
+
 
   function handleEmailBlur() {
     const errorMessage = validateEmail(email);
@@ -40,40 +39,52 @@ export default function AccessPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                onBlur={handleEmailBlur} // Adicionamos o evento onBlur
-                error={emailError}       // Passamos o erro como prop
+                onBlur={handleEmailBlur} 
+                error={emailError}       
               />
-              <FloatingLabelInput
-                id="password"
-                label="Senha"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
+
+              <div className='relative w-full'>
+                <FloatingLabelInput
+                  id="password"
+                  label="Senha"
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+
+
+                />
+
+                <button type='button'
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute cursor-pointer top-1/2 right-3 -translate-y-1/2 text-gray-400 hover:text-white"
+                >
+                  {showPassword ? <FaEye /> : <FaEyeSlash />}
+                </button>
+              </div>
+
             </div>
 
 
-            <div className='flex gap-3 items-center mb-3 '>
-              <input type="checkbox" />
+            <div className='flex gap-2 items-center mb-3 '>
+              <input type="checkbox" className='checkbox-style' />
               <span className='subtitle'>Lembrar de mim</span>
 
             </div>
 
             <button className='bg-primary-400 hover:bg-primary-500 subtitle text-gray-900 transition-all duration-200 p-2 w-full mb-3 cursor-pointer rounded'>Entrar</button>
 
-            <div className='flex gap-2'>
+            <div className='flex gap-2 items-center'>
               <span className='big-subtitle'>Não possui conta?</span>
-              <span className='big-subtitle font-bold'>Cadastrar</span>
+              <span className='cursor-pointer big-subtitle font-bold'>Cadastrar</span>
             </div>
 
-            <span className='big-subtitle'>Esqueci a senha</span>
+            <span className='cursor-pointer big-subtitle  big-subtitle'>Esqueci a senha</span>
           </div>
         </div>
 
         <div className='w-1/2'>
-        <img src={Wallpapers} alt="" className='w-full opacity-100 h-auto object-contain ' />
+          <img src={Wallpapers} alt="" className='w-full opacity-100 h-auto object-contain ' />
 
-          {/* <BrandPanel /> */}
         </div>
 
 
